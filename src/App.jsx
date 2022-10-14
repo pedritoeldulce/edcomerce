@@ -19,12 +19,15 @@ function App() {
   return (
     <div >
       <h2>Hola</h2>
-      <div className="grid grid-cols-5">
-        { products.map((prod)=>{
+      <div className="grid grid-cols-5 gap-6">
+        { products.map(prod => (
           <div key={prod.id}>
-            <img src={prod.images[0]} alt={prod.product_name} />
+            <div>
+              <img src={prod.images[0]} alt={prod.product_name} />
+              <h2>{prod.product_name}</h2>
+            </div>
           </div>
-        }) }
+        )) }
       </div>
     </div>
   )
